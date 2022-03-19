@@ -39,6 +39,8 @@ class Category:
             print("New Category added successfully")
             print("+++ Here is New list of Category +++")
             print(list_category)
+        elif a==0:
+            exit()
         else:
             print("Invalid Input! Please try again")
             # Category menu

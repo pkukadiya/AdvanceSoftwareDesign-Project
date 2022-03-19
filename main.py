@@ -4,6 +4,7 @@ from Category import Category
 
 
 def menu(self):
+    print("+++++MAIN MENU+++++")
     print("For Spending choose 1")
     print("For Transaction choose 2")
     print("For Categories choose 3")
