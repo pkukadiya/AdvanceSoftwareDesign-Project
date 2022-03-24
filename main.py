@@ -1,4 +1,7 @@
+import datetime
+from datetime import datetime
 from Category import Category
+from Spending import Spending
 
 
 def opt_spending():
@@ -12,20 +15,16 @@ def opt_spending():
 def expense_menu():
     print("+++++EXPENSE MENU+++++")
     print()
-    print("Enter Date: ")
-    print("Enter Amount: ")
-    print("Enter category: ")
-    print("Enter Note: ")
-    print()
+    #print("Enter Date: ")
+    i1 = Spending()
+    i1.spending_income()
 
 
 def income_menu():
     print("+++++INCOME MENU+++++")
     print()
-    print("Enter Date: ")
-    print("Enter Amount: ")
-    print("Enter category: ")
-    print("Enter Note: ")
+    i1 = Spending()
+    i1.spending_income()
     print()
 
 
@@ -112,7 +111,7 @@ def menu():
             #print("\"Transaction is selected\"")
             opt_transaction()
         elif option == 3:
-            print("\"Category is selected\"")
+            #print("\"Category is selected\"")
             category_menu()
         elif option == 0:
             exit()

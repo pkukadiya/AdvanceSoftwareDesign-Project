@@ -3,15 +3,15 @@ class Category:
                      "Eating Out",
                      "Entertainment",
                      "Fuel",
-                     "General",
-                     "Gifts",
-                     "Holiday",
-                     "Kids",
-                     "Shopping",
-                      "Sports",
-                      "Travel"]
+                     "General"]
+                     # "Gifts",
+                     # "Holiday",
+                     # "Kids",
+                     # "Shopping",
+                     #  "Sports",
+                     #  "Travel"
 
-    list_budget = [0,0,0,0,0,0,0,0,0,0,0]
+    list_budget = [0,0,0,0,0]
 
 
     def add_budget(self, catID, budget):
@@ -20,6 +20,7 @@ class Category:
 
     def cat_print(self):
         # Print Category with index
+        print("++++++ CATEGORY LIST ++++++")
         for i in self.list_category:
             print(str(self.list_category.index(i))+" : "+ i + " : " + str(self.list_budget[self.list_category.index(i)]))
 
