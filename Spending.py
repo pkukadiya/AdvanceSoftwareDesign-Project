@@ -2,11 +2,11 @@ from Category import Category
 from datetime import datetime
 class Spending:
 
-    def add_expense(self):
-        print("Do somthing")
-
     def current_date(self):
-        your_date = input("enter date in given format yyyy-mm-dd: ")
+        #Reference for get date from user
+        # https://www.w3schools.com/python/python_datetime.asp
+
+        your_date = input("Enter date in given format yyyy-mm-dd: ")
 
         # Create date object in given time format yyyy-mm-dd
         my_date = datetime.strptime(your_date, "%Y-%m-%d")
