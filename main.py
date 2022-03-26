@@ -17,14 +17,14 @@ def expense_menu():
     print()
     #print("Enter Date: ")
     i1 = Spending()
-    i1.spending_income()
+    i1.expense()
 
 
 def income_menu():
     print("+++++INCOME MENU+++++")
     print()
     i1 = Spending()
-    i1.spending_income()
+    i1.income()
     print()
 
 
@@ -63,8 +63,6 @@ def opt_category():
 
 
 def category_menu():
-
-
     # b = len(list_category())
     # switch(a)
 
@@ -83,9 +81,10 @@ def category_menu():
         print("+++ Here is New list of Category +++")
         c1.cat_print()
     elif a==3:
-        cat_number = int(input("Enter the category number that you want to add budget: "))
-        bud = int(input("Add New Budget"))
         c1 = Category()
+        c1.cat_print()
+        cat_number = int(input("Choose category number from above list : "))
+        bud = int(input("Add New Budget: "))
         c1.add_budget(cat_number, bud)
     elif a == 0:
         menu()
@@ -100,7 +99,7 @@ def menu():
     print("For Transaction choose 2")
     print("For Categories choose 3")
     print("For Exit choose 0")
-
+    print()
     option = int(input("Enter your choice: "))
 
     while True:

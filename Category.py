@@ -21,6 +21,7 @@ class Category:
     def cat_print(self):
         # Print Category with index
         print("++++++ CATEGORY LIST ++++++")
+        print()
         for i in self.list_category:
             print(str(self.list_category.index(i))+" : "+ i + " : " + str(self.list_budget[self.list_category.index(i)]))
 
