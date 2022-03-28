@@ -2,6 +2,7 @@ import datetime
 from datetime import datetime
 from Category import Category
 from Spending import Spending
+from Transaction import Transaction
 
 
 def opt_spending():
@@ -46,11 +47,32 @@ def spending_menu():
 
 
 def opt_transaction():
-    print("+++++SPENDING MENU+++++")
+    print("+++++TRANSACTION MENU+++++")
     print()
-    print("Choose 1 for Edit Transaction: ")
-    print("Choose 2 for Delete Transaction: ")
+    print("Choose 1 for List Transaction: ")
+    print("Choose 2 for Edit Transaction: ")
+    print("Choose 3 for Delete Transaction: ")
     print("Choose 0 for Main Menu: ")
+
+def transaction_menu():
+    print()
+    s1 = Spending()
+    t1 = Transaction()
+    opt_transaction()
+    t = int(input("Choose any option: "))
+    print()
+
+    if t == 1:
+        t1.trans_print(s1.list_of_cat,s1.list_dates,s1.list_amount,s1.list_notes)
+    elif t == 2:
+        s1.edit_transaction()
+    elif t == 3:
+        income_menu()
+    elif t == 0:
+        menu()
+    else:
+        print("Invalid Input!! Please enter a valid input..")
+        transaction_menu()
 
 
 def opt_category():
@@ -108,7 +130,7 @@ def menu():
             spending_menu()
         elif option == 2:
             #print("\"Transaction is selected\"")
-            opt_transaction()
+            transaction_menu()
         elif option == 3:
             #print("\"Category is selected\"")
             category_menu()
