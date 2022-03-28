@@ -67,7 +67,7 @@ def transaction_menu():
     elif t == 2:
         s1.edit_transaction()
     elif t == 3:
-        income_menu()
+        s1.del_transaction()
     elif t == 0:
         menu()
     else:

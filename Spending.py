@@ -64,16 +64,24 @@ class Spending:
     def edit_transaction(self):
         t1 = Transaction()
         s1 = Spending()
-        c1 = Category()
         t1.trans_print(s1.list_of_cat,s1.list_dates,s1.list_amount,s1.list_notes)
         e = int(input("Enter Transaction number"))
         e1 = self.list_of_cat[e]
-        print(e1)
+
         self.list_of_cat.append(e1)
         new_amount = int(input("Enter a new amount"))
         self.list_amount[e] = new_amount
         #e2 = self.list_amount[new_amount]
         #print(e2)
         #self.list_amount.append(e2)
+
+    def del_transaction(self):
+        t1 = Transaction()
+        s1 = Spending()
+        t1.trans_print(s1.list_of_cat, s1.list_dates, s1.list_amount, s1.list_notes)
+        d = int(input("Enter Transaction number"))
+        #d1 = self.list_of_cat[d]
+        self.list_of_cat.clear()
+
 
 
