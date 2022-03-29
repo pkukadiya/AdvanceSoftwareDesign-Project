@@ -110,7 +110,7 @@ class Spending:
         c1 = Category()
         t1 = Transaction()
         s1 = Spending()
-        #print(c1.list_total_budget)
+        # print(c1.list_total_budget)
         c1.print_budget()
         t1.trans_print(s1.list_of_cat, s1.list_dates, s1.list_amount, s1.list_notes)
 
