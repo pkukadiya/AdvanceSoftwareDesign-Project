@@ -1,10 +1,9 @@
-import datetime
-from datetime import datetime
+# import from class
 from Category import Category
 from Spending import Spending
 from Transaction import Transaction
 
-
+# Function for menu printing
 def opt_spending():
     print("+++++SPENDING MENU+++++")
     print()
@@ -12,18 +11,20 @@ def opt_spending():
     print("Choose 2 for Income: ")
     print("Choose 0 for Main Menu: ")
 
-
+# Function for menu printing
 def expense_menu():
     print("+++++EXPENSE MENU+++++")
     print()
     #print("Enter Date: ")
     i1 = Spending()
+    # Call expense function by creating spending class object
     i1.expense()
 
-
+# Function for menu printing
 def income_menu():
     print("+++++INCOME MENU+++++")
     print()
+    # Call expense function by creating spending class object
     i1 = Spending()
     i1.income()
     print()
@@ -56,6 +57,7 @@ def opt_transaction():
 
 def transaction_menu():
     print()
+    # creating class object
     s1 = Spending()
     t1 = Transaction()
     opt_transaction()
@@ -78,10 +80,10 @@ def transaction_menu():
 def opt_category():
     print("+++++CATEGORY MENU+++++")
     print()
-    print("For list Categories choose 1")
-    print("For add new Categories choose 2")
-    print("For add budget by each Categories choose 3")
-    print("For Main Menu choose 0")
+    print("Choose 1 for list Categories: ")
+    print("Choose 2 for add new Categories: ")
+    print("Choose 3 for add budget by each Categories: ")
+    print("Choose 0 for Main Menu: ")
 
 
 def category_menu():
@@ -97,7 +99,7 @@ def category_menu():
     elif a == 2:
         c1 = Category()
         # print("Add new Category:")
-        a = input("Enter the name of New Category")
+        a = input("Enter the name of New Category: ")
         c1.add_cat(a)
         print("New Category added successfully")
         print("+++ Here is New list of Category +++")
@@ -105,7 +107,7 @@ def category_menu():
     elif a==3:
         c1 = Category()
         c1.cat_print()
-        cat_number = int(input("Choose category number from above list : "))
+        cat_number = int(input("Choose category number from above list: "))
         bud = int(input("Add New Budget: "))
         c1.add_budget(cat_number, bud)
     elif a == 0:

@@ -1,4 +1,5 @@
 class Category:
+    # Make a category and budget list
     list_category = ["Cloths",
                      "Eating Out",
                      "Entertainment",
@@ -15,6 +16,7 @@ class Category:
 
 
     def add_budget(self, catID, budget):
+        # For perticular category add budget
         self.list_budget[catID] = budget
 
 
@@ -26,6 +28,7 @@ class Category:
             print(str(self.list_category.index(i))+" : "+ i + " : " + str(self.list_budget[self.list_category.index(i)]))
 
     def add_cat(self,new_cat):
+        # For new category and budget
         self.list_category.append(new_cat)
         self.list_budget.append(0)
 
