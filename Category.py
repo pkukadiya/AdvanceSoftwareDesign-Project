@@ -26,8 +26,11 @@ class Category:
         print(self.list_total_budget)
 
     def print_budget(self):
+
         # for i in self.list_total_budget:
-        print(str(self.list_category)+"Your total budget is: " + str(self.list_total_budget))
+        print("Your total budget is: " + str(self.list_total_budget) + " " +str(self.list_category))
+        exit()
+
 
     def cat_print(self):
         print()

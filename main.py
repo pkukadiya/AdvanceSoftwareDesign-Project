@@ -114,7 +114,15 @@ def category_menu():
         c1.cat_print()
         print()
         cat_number = int(input("Choose category number from above list: "))
-        bud = int(input("Add New Budget: "))
+        # Validation for only accept integer
+        while True:
+            try:
+                bud = int(input("Add New Budget: "))
+                break
+            except ValueError:
+                print("=> Please input integer only")
+                continue
+        # bud = int(input("Add New Budget: "))
         c1.add_budget(cat_number, bud)
         c1.total_budget(cat_number,bud)
     elif a == 0:

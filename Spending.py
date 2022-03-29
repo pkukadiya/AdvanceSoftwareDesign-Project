@@ -37,8 +37,17 @@ class Spending:
         # Create date object in given time format yyyy-mm-dd
         my_date = datetime.strptime(your_date, "%Y-%m-%d")
         self.list_dates.append(my_date)
+
         # user entered expense amount and it substitute from budget
-        amount = int(input("Enter Amount: "))
+        # Validation for only accept integer
+        while True:
+            try:
+                amount = int(input("Enter Amount: "))
+                break
+            except ValueError:
+                print("=> Please input integer only")
+                continue
+        # amount = int(input("Enter Amount: "))
         a2 = c1.list_budget[choose_cat] - amount
         c1.add_budget(choose_cat, a2)
         self.list_amount.append(a2)
@@ -67,7 +76,14 @@ class Spending:
         my_date = datetime.strptime(your_date, "%Y-%m-%d")
         self.list_dates.append(my_date)
 
-        amount = int(input("Enter Amount: "))
+        while True:
+            try:
+                amount = int(input("Enter Amount: "))
+                break
+            except ValueError:
+                print("=> Please input integer only")
+                continue
+        # amount = int(input("Enter Amount: "))
         a2 = c1.list_budget[choose_cat] + amount
         c1.add_budget(choose_cat, a2)
         self.list_amount.append(a2)
@@ -89,7 +105,14 @@ class Spending:
         # Append the value of transaction number
         self.list_of_cat.append(e1)
         # For new amount
-        new_amount = int(input("Enter a new amount"))
+        while True:
+            try:
+                new_amount = int(input("Enter a new amount: "))
+                break
+            except ValueError:
+                print("=> Please input integer only")
+                continue
+        # new_amount = int(input("Enter a new amount"))
         self.list_amount[e] = new_amount
         # e2 = self.list_amount[new_amount]
         # print(e2)
@@ -111,8 +134,18 @@ class Spending:
         t1 = Transaction()
         s1 = Spending()
         # print(c1.list_total_budget)
-        c1.print_budget()
         t1.trans_print(s1.list_of_cat, s1.list_dates, s1.list_amount, s1.list_notes)
+        c1.print_budget()
+
+    # def num_validation(self,num):
+    #     while True:
+    #         try:
+    #             num = int(input("Enter an integer number: "))
+    #             break
+    #         except ValueError:
+    #             print("Please input integer only...")
+    #             continue
+
 
 
 
