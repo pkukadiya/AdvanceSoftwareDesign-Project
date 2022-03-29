@@ -3,6 +3,7 @@ from Category import Category
 from Spending import Spending
 from Transaction import Transaction
 
+
 # Function for menu printing
 def opt_spending():
     print()
@@ -12,15 +13,17 @@ def opt_spending():
     print("Choose 2 for Income: ")
     print("Choose 0 for Main Menu: ")
 
+
 # Function for menu printing
 def expense_menu():
     print()
     print("+++++EXPENSE MENU+++++")
     print()
-    #print("Enter Date: ")
+    # print("Enter Date: ")
     i1 = Spending()
     # Call expense function by creating spending class object
     i1.expense()
+
 
 # Function for menu printing
 def income_menu():
@@ -59,6 +62,7 @@ def opt_transaction():
     print("Choose 3 for Delete Transaction: ")
     print("Choose 0 for Main Menu: ")
 
+
 def transaction_menu():
     print()
     # creating class object
@@ -69,7 +73,7 @@ def transaction_menu():
     print()
 
     if t == 1:
-        t1.trans_print(s1.list_of_cat,s1.list_dates,s1.list_amount,s1.list_notes)
+        t1.trans_print(s1.list_of_cat, s1.list_dates, s1.list_amount, s1.list_notes)
     elif t == 2:
         s1.edit_transaction()
     elif t == 3:
@@ -109,7 +113,7 @@ def category_menu():
         print("New Category added successfully")
         print("+++ Here is New list of Category +++")
         c1.cat_print()
-    elif a==3:
+    elif a == 3:
         c1 = Category()
         c1.cat_print()
         print()
@@ -124,12 +128,13 @@ def category_menu():
                 continue
         # bud = int(input("Add New Budget: "))
         c1.add_budget(cat_number, bud)
-        c1.total_budget(cat_number,bud)
+        c1.total_budget(cat_number, bud)
     elif a == 0:
         menu()
     else:
         print("Invalid Input! Please try again")
         # Category menu
+
 
 def menu():
     print()
@@ -145,13 +150,13 @@ def menu():
 
     while True:
         if option == 1:
-            #print("\"Spending is selected\"")
+            # print("\"Spending is selected\"")
             spending_menu()
         elif option == 2:
-            #print("\"Transaction is selected\"")
+            # print("\"Transaction is selected\"")
             transaction_menu()
         elif option == 3:
-            #print("\"Category is selected\"")
+            # print("\"Category is selected\"")
             category_menu()
         elif option == 4:
             s1 = Spending()
@@ -159,13 +164,12 @@ def menu():
             s1.progress()
 
         elif option == 0:
+            print("Thanks for using this program. GoodBye :)")
             exit()
         else:
             print("Invalid Input! Please try again")
             menu()
-    print("Thanks for using program. GoodBye :)")
+
 
 
 menu()
-
-
