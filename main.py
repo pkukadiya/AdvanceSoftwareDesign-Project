@@ -5,6 +5,7 @@ from Transaction import Transaction
 
 # Function for menu printing
 def opt_spending():
+    print()
     print("+++++SPENDING MENU+++++")
     print()
     print("Choose 1 for Expense: ")
@@ -13,6 +14,7 @@ def opt_spending():
 
 # Function for menu printing
 def expense_menu():
+    print()
     print("+++++EXPENSE MENU+++++")
     print()
     #print("Enter Date: ")
@@ -22,6 +24,7 @@ def expense_menu():
 
 # Function for menu printing
 def income_menu():
+    print()
     print("+++++INCOME MENU+++++")
     print()
     # Call expense function by creating spending class object
@@ -48,6 +51,7 @@ def spending_menu():
 
 
 def opt_transaction():
+    print()
     print("+++++TRANSACTION MENU+++++")
     print()
     print("Choose 1 for List Transaction: ")
@@ -78,6 +82,7 @@ def transaction_menu():
 
 
 def opt_category():
+    print()
     print("+++++CATEGORY MENU+++++")
     print()
     print("Choose 1 for list Categories: ")
@@ -89,7 +94,7 @@ def opt_category():
 def category_menu():
     # b = len(list_category())
     # switch(a)
-
+    print()
     opt_category()
     a = int(input("Enter your choice: "))
 
@@ -107,9 +112,11 @@ def category_menu():
     elif a==3:
         c1 = Category()
         c1.cat_print()
+        print()
         cat_number = int(input("Choose category number from above list: "))
         bud = int(input("Add New Budget: "))
         c1.add_budget(cat_number, bud)
+        c1.total_budget(cat_number,bud)
     elif a == 0:
         menu()
     else:
@@ -117,11 +124,13 @@ def category_menu():
         # Category menu
 
 def menu():
+    print()
     print("+++++MAIN MENU+++++")
     print()
     print("For Spending choose 1")
     print("For Transaction choose 2")
     print("For Categories choose 3")
+    print("For Progress choose 4")
     print("For Exit choose 0")
     print()
     option = int(input("Enter your choice: "))
@@ -136,6 +145,11 @@ def menu():
         elif option == 3:
             #print("\"Category is selected\"")
             category_menu()
+        elif option == 4:
+            s1 = Spending()
+            print("\"Progress is here...\"")
+            s1.progress()
+
         elif option == 0:
             exit()
         else:

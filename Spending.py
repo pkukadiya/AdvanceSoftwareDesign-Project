@@ -55,6 +55,7 @@ class Spending:
 
         # Category list print
         c1.cat_print()
+        print()
         choose_cat = int(input("Choose category Between 0 To 4: "))
         a1 = c1.list_category[choose_cat]
         self.list_of_cat.append(a1)
@@ -104,3 +105,14 @@ class Spending:
         d = int(input("Enter Transaction number"))
         # d1 = self.list_of_cat[d]
         self.list_of_cat.clear()
+
+    def progress(self):
+        c1 = Category()
+        t1 = Transaction()
+        s1 = Spending()
+        #print(c1.list_total_budget)
+        c1.print_budget()
+        t1.trans_print(s1.list_of_cat, s1.list_dates, s1.list_amount, s1.list_notes)
+
+
+
